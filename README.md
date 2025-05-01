@@ -110,3 +110,29 @@ You can't commit new changes in this state unless you create a new branch from i
 git checkout -b new-branch-name 1a2b3c4d
  git checkout "commit message" → Invalid
  git checkout <commit hash> → Valid
+
+# git stash ==> Temporarily save uncommitted changes
+git stash —
+When you're in the middle of changes and need to shift focus (like switching branches or pulling updates), git stash stores your modified tracked files in a temporary stack. Your working directory is then cleaned to the last committed state.
+
+# git stash list ==> View all saved stashes
+git stash list —
+Shows a list of all stashed changes saved in your repository.
+#### Sample Output
+```
+stash@{0}: WIP on main: 9fceb02 Add navbar and logo
+stash@{1}: WIP on main: 3d1e4f5 Fix login redirect
+stash@{2}: On dev: 4a3bc90 Add contact form
+```
+
+# git stash push -m <message> ==> Create a stash with a custom name
+git stash push -m "feature/like" —
+By default, Git automatically generates stash messages like stash@{0} : WIP on main: 9fceb02. However, using the -m (message) flag, you can provide your own description when stashing. 
+
+# git stash pop ==> Apply and remove the most recent stash
+git stash pop —
+It retrieves the most recent stashed changes and applies them back to your working directory.
+
+# git stash apply ==> Apply stashed changes without deleting them
+git stash apply —
+Applies the most recent stash (stash@{0}) to your working directory, but keeps it in the stash list. By default, it applies the most recent stash (stash@{0}), but you can specify another one (like stash@{1}).
