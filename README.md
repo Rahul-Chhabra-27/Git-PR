@@ -1,15 +1,47 @@
-# git init => used to initialize the git.
-.git folder has been created as soon as git init command executed...
+##  Basic Git Commands
 
-# git status ==> it shows the current status of your application.
-git add <file> ==> current file will move to staged area.
+### Repository Setup
+- `git init`  
+  Initializes a new Git repository in the current directory.
 
- #git commit -m "commit message"
+- `git clone <repo_url>`  
+  Clones a repository from a remote URL to your local machine.
 
-# git commit -a -m "commit message" ==> tracked to commited
+---
 
-# git log ==> to show all the commits timeline.
+###  Staging & Committing
+- `git status`  
+  Displays the state of the working directory and staging area.
 
-# git add . ==> add all the changes to the staged area.
+- `git add <file>`  
+  Stages the specified file for commit.
 
-# git checkout <commit-message>
+- `git add .`  
+  Stages all changed files in the current directory.
+
+- `git commit -m "message"`  
+  Commits staged changes with a message.
+
+---
+
+###  Syncing with Remote
+- `git push`  
+  Pushes committed changes to the remote repository.
+
+- `git pull`  
+  Fetches and merges changes from the remote repository.
+
+- `git fetch`  
+  Downloads objects and refs from the remote repository (without merging).
+
+- `git merge <branch_name>`  
+  Merges changes from the specified branch into the current branch.
+
+---
+
+### Review & History
+- `git log`  
+  Shows the commit history.
+
+- `git diff`  
+  Shows the difference between files in working directory and staging area.
